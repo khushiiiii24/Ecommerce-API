@@ -8,12 +8,20 @@ const ProductSchema = new mongoose.Schema(
     category: {
       type: String,
     },
-    //   images: { primary, secondary },
+    images: {
+      // primary: {
+      //   type: String,
+      // },
+      // secondary: {
+      //   type: String,
+      // },
+      type:String
+    },
     quantity: { type: Number },
     originalPrice: { type: Number },
     discountedPrice: { type: Number },
     description: { type: String },
-    //   attributes: { type: String },
+      attributes: { type: String }
   },
   { timestamps: true }
 );

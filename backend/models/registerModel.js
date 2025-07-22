@@ -1,16 +1,21 @@
 import mongoose from "mongoose";
-const RegisterSchema = new mongoose.Schema({
-  name: {
-    type: String,
+const RegisterSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+    },
+    email: {
+      type: String,
+    },
+    image: {
+      type: String,
+    },
+    password: {
+      type: String,
+    },
   },
-  email: {
-    type: String,
-  },
-  //   image,
-  password: {
-    type: String,
-  },
-},{timestamps:true});
+  { timestamps: true }
+);
 
-const RegisterModel= mongoose.model("register",RegisterSchema)
-export default RegisterModel
+const RegisterModel = mongoose.model("register", RegisterSchema);
+export default RegisterModel;

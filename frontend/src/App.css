@@ -1,0 +1,118 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Left side image */
+.login-left {
+  flex: 1;
+  background-color: #eaf4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right side form */
+.login-right {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-button {
+  background-color: #db4444;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-button:hover {
+  background-color: #b83737;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #db4444;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-left {
+    height: 250px;
+    padding: 20px;
+  }
+
+  .login-right {
+    padding: 30px;
+  }
+}
+.signup-link {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.signup-link a {
+  color: #db4444;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

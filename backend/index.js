@@ -7,7 +7,8 @@ import productRouter from "./routes/productRoutes.js";
 import cartRouter from "./routes/cartRoutes.js";
 import wishlistRouter from "./routes/wishlistRoutes.js";
 import userRouter from "./routes/userRoutes.js";
-
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./swagger.js";
 dotenv.config();
 const app=express();
 const port=process.env.port;
@@ -22,7 +23,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
-
+app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerSpec))
 app.use("/products",productRouter);
 app.use("/user",userRouter)
 app.use("/cart",cartRouter);

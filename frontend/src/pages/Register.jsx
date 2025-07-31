@@ -21,7 +21,7 @@ function Register() {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     try {
-        const response=await axios.post("http://localhost:4000/user/register",formData)
+        const response=await axios.post("http://localhost:4000/user/register",formData,{withCredentials:true})
         console.log(response);
         navigate("/")
     } catch (error) {

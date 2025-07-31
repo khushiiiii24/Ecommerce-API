@@ -4,8 +4,9 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export async function loginUser(req, res) {
-  const { email, password } = req.body;
-//   console.log(req.body);
+  try {
+    const { email, password } = req.body;
+  console.log(req.body);
   
   const user = await userModel.findOne({ email });
   console.log(user);
@@ -19,16 +20,16 @@ export async function loginUser(req, res) {
     return res.status(401).json({ message: "user not Logged in" });
   }
 
-  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRETE, {
+  const token = jwt.sign({ id: user._id ,email:user.email}, process.env.JWT_SECRETE, {
     expiresIn: "1d",
   });
 
   res
-    .cookie("generatedToken", token, {
+    .cookie("token", token, {
       httpOnly: true,
       secure: true,
       sameSite: "strict",
-      maxAge: 36000,
+      maxAge: 3600000,
     })
     .send({
       message: "user login succesfully",
@@ -37,4 +38,9 @@ export async function loginUser(req, res) {
         email: user.email,
       },
     });
+  } catch (error) {
+    console.log("login token error: ",error);
+    
+  }
+  
 }

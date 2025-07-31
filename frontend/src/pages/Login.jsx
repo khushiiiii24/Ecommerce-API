@@ -19,7 +19,7 @@ function Login() {
     e.preventDefault();
     console.log("login data successfully: ", loginData);
     try {
-      const response=await axios.post("http://localhost:4000/user/login",loginData)
+      const response=await axios.post("http://localhost:4000/user/login",loginData,{withCredentials:true})
       console.log(response);
       navigate("/home")
     } catch (error) {

@@ -7,7 +7,7 @@ const storage = new CloudinaryStorage({
   params: {
     folder: "user_images", 
     allowed_formats: ["jpg", "png", "jpeg"],
-    public_id: (req, file) => user-`${Date.now()}`, 
+    public_id: (req, file) => `user-${Date.now()}`, 
   }
 })
 

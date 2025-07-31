@@ -5,6 +5,7 @@ import './index.css'
 import './App.css'
 // import Login from './pages/Login.jsx'
 // import Register from './pages/Register.jsx'
+    import 'bootstrap/dist/css/bootstrap.min.css';
 import Router from './Router.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>

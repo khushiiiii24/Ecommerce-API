@@ -1,4 +1,18 @@
 import ProductModel from "../models/productModel.js";
+// import { v2 as cloudinary } from "cloudinary";
+// import cloudinary from "../config/cloudinary.js";
+// function uploadCloud(buffer, folder) {
+//   return new Promise((resolve, reject) => {
+//     const stream = cloudinary.uploader.upload_stream(
+//       { folder },
+//       (err, result) => {
+//         if (result) resolve(result);
+//         else reject(err);
+//       }
+//     );
+//     stream.end(buffer)
+//   });
+// }
 
 export async function addProduct(req, res) {
   console.log(req.body);
@@ -6,7 +20,7 @@ export async function addProduct(req, res) {
     name,
     slug,
     category,
-    // image,
+    image,
     quantity,
     originalPrice,
     discountedPrice,

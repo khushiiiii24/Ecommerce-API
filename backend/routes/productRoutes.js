@@ -3,7 +3,7 @@ import { addProduct, getAllProducts, getSingleProducts } from "../controllers/pr
 import { uploadCloud } from "../middleware/cloudinaryUpload.js";
 
 const productRouter=Router()
-productRouter.post("/productAdd",addProduct)
+productRouter.post("/productAdd", uploadCloud.single('image') ,addProduct)
 productRouter.get("/getAllProduct",getAllProducts)
 productRouter.get("/getSingleProduct/:id",uploadCloud.single("image"),getSingleProducts)
 export default productRouter

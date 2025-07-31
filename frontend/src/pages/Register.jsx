@@ -7,7 +7,7 @@ function Register() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    // image:"",
+    image:"",
     password: "",
   });
   function handleChange(e) {
@@ -61,7 +61,7 @@ function Register() {
             required
           />
 
-          {/* <input
+           <input
             type="file"
             className="login-input"
             name="image"
@@ -69,7 +69,7 @@ function Register() {
             onChange={handleChange}
 
             // required
-          /> */}
+          /> 
 
           <input
             type="password"

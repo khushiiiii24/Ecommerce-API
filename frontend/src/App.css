@@ -1,118 +1,106 @@
-.login-container {
-  display: flex;
-  height: 100vh;
-  background-color: #ffffff;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Left side image */
-.login-left {
-  flex: 1;
-  background-color: #eaf4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-}
-
-.login-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Right side form */
-.login-right {
-  flex: 1;
-  padding: 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.login-title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-.login-subtitle {
+/* Topbar */
+.topbar {
+  text-align: center;
   font-size: 14px;
-  color: #555;
-  margin-bottom: 30px;
+  background: #000;
+  color: white;
+  padding: 10px 0;
+  font-family: "Georgia", serif;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
+.underline {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.login-input {
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-}
-
-.login-actions {
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 60px;
+  background-color: white;
+  color: black;
+  font-family: "Georgia", serif;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.login-button {
-  background-color: #db4444;
-  color: white;
-  padding: 10px 24px;
-  border: none;
-  border-radius: 6px;
+.leftNavbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.leftNavbar h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.leftNavbarUl,
+.rightNavbarUl {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.leftNavbarUl li,
+.rightNavbarUl li {
   cursor: pointer;
-  font-weight: 500;
-}
-
-.login-button:hover {
-  background-color: #b83737;
-}
-
-.forgot-password {
   font-size: 14px;
-  color: #db4444;
-  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.forgot-password:hover {
-  text-decoration: underline;
+.leftNavbarUl li:hover,
+.rightNavbarUl li:hover {
+  color: #888;
 }
 
-/* Responsive for small screens */
+/* Right navbar icons */
+.rightNavbarUl li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Home Main Image */
+.homeMainImage {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 0; /* Not needed anymore with sticky navbar */
+}
+
+.homeMainImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.homeImageContent{
+position: absolute;
+top: 600px;
+color: white;
+}
+/* Responsive navbar */
 @media (max-width: 768px) {
-  .login-container {
-    flex-direction: column;
+  .leftNavbarUl,
+  .rightNavbarUl {
+    display: none; /* You can later add a mobile menu */
   }
 
-  .login-left {
-    height: 250px;
-    padding: 20px;
+  .leftNavbar {
+    justify-content: space-between;
+    width: 100%;
   }
-
-  .login-right {
-    padding: 30px;
-  }
-}
-.signup-link {
-  margin-top: 25px;
-  text-align: center;
-  font-size: 14px;
-  color: #444;
-}
-
-.signup-link a {
-  color: #db4444;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.signup-link a:hover {
-  text-decoration: underline;
 }

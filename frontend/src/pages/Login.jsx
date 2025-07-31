@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import sideImage from "../assets/sideImage.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../App.css"
 
 function Login() {
   const navigate=useNavigate();
@@ -64,9 +65,12 @@ function Login() {
           />
 
           <div className="login-actions">
-            <button type="submit" className="login-button">
+            <Link to="/home">
+             <button type="submit" className="login-button">
+              
               Log In
-            </button>
+            </button></Link>
+           
             <a href="#" className="forgot-password">
               Forget Password?
             </a>

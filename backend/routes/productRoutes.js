@@ -1,6 +1,7 @@
 import {Router} from "express";
 import { addProduct, getAllProducts, getSingleProducts } from "../controllers/productControllers.js";
-import { uploadCloud } from "../middleware/cloudinaryUpload.js";
+import uploadCloud from "../middleware/cloudinaryUpload.js";
+
 
 const productRouter=Router()
 productRouter.post("/productAdd", uploadCloud.single('image') ,addProduct)

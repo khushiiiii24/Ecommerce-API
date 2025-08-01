@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import sideImage from "../assets/sideImage.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../App.css"
-
+// import "../App.css"
+import "./Login.css"
 function Login() {
   const navigate=useNavigate();
   const [loginData, setLoginData] = useState({
@@ -30,14 +30,6 @@ function Login() {
   }
   return (
     <div className="login-container">
-      {/* Left image section */}
-      <div className="login-left">
-        <img
-          src={sideImage}
-          alt="Shopping Illustration"
-          className="login-image"
-        />
-      </div>
 
       {/* Right form section */}
       <div className="login-right">

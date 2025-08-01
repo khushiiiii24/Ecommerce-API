@@ -9,7 +9,7 @@
 .topbar {
   text-align: center;
   font-size: 14px;
-  background-color:black;
+  background-color: black;
   color: white;
   padding: 10px 0;
   font-family: "Georgia", serif;
@@ -34,6 +34,8 @@
   color: black;
   font-family: "Georgia", serif;
   border-bottom: 1px solid #eaeaea;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .leftNavbar {
@@ -60,6 +62,7 @@
   cursor: pointer;
   font-size: 14px;
   transition: color 0.3s ease;
+  font-size: large;
 }
 
 .leftNavbarUl li:hover,
@@ -87,10 +90,157 @@
   height: auto;
   display: block;
 }
-.homeImageContent{
-position: absolute;
-top: 600px;
-color: white;
+.homeImageContent {
+  position: absolute;
+  top: 680px;
+  color: white;
+  padding-left: 50px;
+}
+.shopTheCollection {
+  text-decoration: underline;
+}
+
+/* //home */
+/* home */
+.homePageVariety {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.homePageVariety div {
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.homePageVariety div:hover {
+  transform: scale(1.05);
+}
+
+.homePageVariety img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.homePageVariety p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  color: #333;
+}
+.homeKinnAfterVariety {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+}
+
+.homeKinnAfterVariety img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.homeKinnAfterVarietyContentMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4); /* optional overlay */
+  text-align: center;
+  padding: 20px;
+}
+
+.homeKinnAfterVarietyContent div {
+  font-size: 24px;
+  font-family: "Georgia", serif;
+  margin: 10px 0;
+}
+
+.homeKinnAfterVarietyContentBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.homeKinnAfterVarietyContentBtn:hover {
+  background-color: #ddd;
+}
+/* tenniscollection home page */
+.tennisCollection {
+  background-color: #f9f6f1;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #1a1a1a;
+}
+
+.tennisCollectionPhase1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.tennisCollectionPhase1::after {
+  content: " ";
+  display: block;
+  margin-top: 8px;
+  width: max-content;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.tennisCollectionPhase1::after {
+  content: "SHOP THE COLLECTION";
+}
+
+.tennisCollectionPhase2 {
+  font-size: 1.8rem;
+  max-width: 1000px;
+  margin: 60px auto 0;
+  line-height: 1.6;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tennisCollectionPhase2 em {
+  font-style: italic;
+}
+
+.tennisCollectionPhase2 strong {
+  font-weight: 600;
+}
+/* //EternalCommitment */
+.EternalCommitmentVideo{
+      width: -webkit-fill-available;
+
 }
 /* Responsive navbar */
 @media (max-width: 768px) {

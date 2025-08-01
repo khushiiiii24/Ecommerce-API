@@ -4,6 +4,9 @@ import { MdOutlineCurrencyRupee } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
 import { RiShoppingBagLine } from "react-icons/ri";
 import homeMainImage from "../assets/homeMainImage.png";
+import { Link } from "react-router-dom";
+import { MdLogout } from "react-icons/md";
+
 function Navbar() {
   return (
     <>
@@ -19,6 +22,10 @@ function Navbar() {
             <li>CHARMS & PENDANTS</li>
             <li>BRIDAL</li>
             <li>ABOUT</li>
+            <li>
+           
+              <Link to="/home/allproducts">ALL PRODUCTS</Link>
+            </li>
           </ul>
         </div>
         <div className="rightNavbar">
@@ -36,6 +43,11 @@ function Navbar() {
             <li>
               <RiShoppingBagLine />
             </li>
+            <Link to="/logout">
+              <li>
+                <MdLogout />
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -46,8 +58,11 @@ function Navbar() {
         <h2>
           Introducing—<em>Unexpected Proposal</em>
         </h2>
-        <p>Bespoke engagement and wedding heirlooms...</p>
-        <button>SHOP THE COLLECTION</button>
+        <p>
+          Bespoke engagement and wedding heirlooms for modern love
+          stories—classic in quality, unexpected in form.
+        </p>
+        <div className="shopTheCollection">SHOP THE COLLECTION</div>
       </div>
     </>
   );

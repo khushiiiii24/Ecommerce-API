@@ -4,8 +4,14 @@ import First from "./pages/First";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Allproducts from "./pages/Allproducts";
+import Logout from "./pages/Logout";
 
 const router = createBrowserRouter([
+   {
+    path: "/",
+    element: <Login />,
+  },
   {
     path: "/home",
     element: <First />,
@@ -14,16 +20,20 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      {
+    path:"/home/allproducts",
+    element:<Allproducts/>
+  }
     ],
   },
-  {
-    path: "/",
-    element: <Login />,
-  },
+ 
   {
     path: "/register",
     element: <Register />,
-  },
+  },{
+    path:"/logout",
+    element:<Logout/>
+  }
 ]);
 function Router() {
   return <RouterProvider router={router}></RouterProvider>;

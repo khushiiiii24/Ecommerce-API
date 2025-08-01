@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import sideImage from "../assets/sideImage.png";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
+import "./Login.css";
 function Register() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    image:"",
+    image: "",
     password: "",
   });
   function handleChange(e) {
@@ -21,20 +21,19 @@ function Register() {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     try {
-        const response=await axios.post("http://localhost:4000/user/register",formData,{withCredentials:true})
-        console.log(response);
-        navigate("/")
+      const response = await axios.post(
+        "http://localhost:4000/user/register",
+        formData,
+        { withCredentials: true }
+      );
+      console.log(response);
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
   }
   return (
     <div className="login-container">
-      {/* Left side image section */}
-      <div className="login-left">
-        <img src={sideImage} alt="Illustration" className="login-image" />
-      </div>
-
       {/* Right side registration form */}
       <div className="login-right">
         <h2 className="login-title">Create an Account</h2>
@@ -61,7 +60,7 @@ function Register() {
             required
           />
 
-           <input
+          <input
             type="file"
             className="login-input"
             name="image"
@@ -69,7 +68,7 @@ function Register() {
             onChange={handleChange}
 
             // required
-          /> 
+          />
 
           <input
             type="password"

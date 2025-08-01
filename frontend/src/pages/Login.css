@@ -1,0 +1,97 @@
+/* Global Background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6f1;
+  font-family: "Georgia", serif;
+}
+
+/* Centering the Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login Card */
+.login-right {
+  background-color: #f3ede5;
+  padding: 40px 35px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.login-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #002d27;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.login-subtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+/* Input Fields */
+.login-input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Login Button */
+.login-button {
+  background-color: #5c3bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #3a1fff;
+}
+
+/* Actions Row (e.g. Forgot Password) */
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+/* Forgot Password link */
+.forgot-password {
+  font-size: 13px;
+  color: #002d27;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Bottom Sign-Up Prompt */
+.signup-link {
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #002d27;
+  text-decoration: underline;
+}

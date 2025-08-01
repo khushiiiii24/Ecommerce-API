@@ -11,7 +11,7 @@ import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./swagger.js";
 dotenv.config();
 const app=express();
-const port=process.env.port;
+const port=process.env.PORT;
 await connectToDB()
 
 app.use(cors({
